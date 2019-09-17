@@ -1,11 +1,11 @@
 import React from "react"
+import CreateUser from "./CreateUser"
 
 class App extends React.Component {
   state = {
     language: "english"
   }
   onLanguegeSelect = language => {
-    console.log(language)
     this.setState({ language })
   }
   render() {
@@ -22,6 +22,7 @@ class App extends React.Component {
             onClick={() => this.onLanguegeSelect("spanish")}
           ></i>
         </div>
+        <CreateUser></CreateUser>
       </div>
     )
   }
