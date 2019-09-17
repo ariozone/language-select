@@ -11,8 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div className='ui container'>
-        <div className='m-2'>
-          Select a language:
+        <div>
+          Select a language:{" "}
           <i
             className='flag us'
             onClick={() => this.onLanguegeSelect("english")}
