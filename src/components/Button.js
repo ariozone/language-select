@@ -3,13 +3,43 @@ import languageContext from "../contexts/languageContext"
 import ColorContext from "../contexts/colorContext"
 
 class Button extends Component {
-  getText = value => (value.language === "english" ? "Submit" : "Enviar")
+  getText = language => {
+    switch (language) {
+      case "english":
+        return "Submit"
+
+      case "spanish":
+        return "Enivar"
+
+      case "french":
+        return "Soumettre"
+
+      case "german":
+        return "Einreichen"
+
+      case "italian":
+        return "Sottoscrivi"
+
+      case "danish":
+        return "Indsend"
+
+      case "hungarian":
+        return "Bekuldes"
+
+      case "portuguese":
+        return "Enivar"
+
+      default:
+        return "Submit"
+    }
+  }
+
   renderButton = color => {
     return (
       <button className={`ui button ${color}`}>
         {" "}
         <languageContext.Consumer>
-          {value => this.getText(value)}
+          {({ language }) => this.getText(language)}
         </languageContext.Consumer>
       </button>
     )
