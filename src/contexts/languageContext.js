@@ -5,13 +5,13 @@ export class LanguageStore extends React.Component {
   state = {
     language: "english"
   }
-  onLanguegeSelect = language => {
+  onLanguageSelect = language => {
     this.setState({ language })
   }
   render() {
     return (
       <Context.Provider
-        value={{ ...this.state, onLanguageSelect: this.onLanguegeSelect }}
+        value={{ ...this.state, onLanguageSelect: this.onLanguageSelect }}
       >
         {this.props.children}
       </Context.Provider>

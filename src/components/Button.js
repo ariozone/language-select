@@ -3,7 +3,7 @@ import languageContext from "../contexts/languageContext"
 import ColorContext from "../contexts/colorContext"
 
 class Button extends Component {
-  getText = value => (value === "english" ? "Submit" : "Enviar")
+  getText = value => (value.language === "english" ? "Submit" : "Enviar")
   renderButton = color => {
     return (
       <button className={`ui button ${color}`}>
