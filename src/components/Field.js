@@ -3,42 +3,41 @@ import languageContext from "../contexts/languageContext"
 
 class Field extends Component {
   static contextType = languageContext
-  render() {
-    const language = this.context.language
-    let text
+  getText = language => {
     switch (language) {
       case "english":
-        text = "Name"
-        break
+        return "Name"
+
       case "spanish":
-        text = "Nombre"
-        break
+        return "Nombre"
+
       case "french":
-        text = "Nom"
-        break
+        return "Nom"
+
       case "german":
-        text = "Name"
-        break
+        return "Name"
+
       case "italian":
-        text = "Nome"
-        break
+        return "Nome"
+
       case "danish":
-        text = "Navn"
-        break
+        return "Navn"
+
       case "hungarian":
-        text = "Nev"
-        break
+        return "Nev"
+
       case "portuguese":
-        text = "Nome"
-        break
+        return "Nome"
 
       default:
-        text = "Name"
+        return "Name"
     }
+  }
 
+  render() {
     return (
       <div className='ui field'>
-        <label>{text}</label>
+        <label className='bold'>{this.getText(this.context.language)}</label>
         <input></input>
       </div>
     )

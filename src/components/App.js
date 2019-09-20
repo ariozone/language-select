@@ -3,6 +3,7 @@ import CreateUser from "./CreateUser"
 import { LanguageStore } from "../contexts/languageContext"
 import ColorContext from "../contexts/colorContext"
 import LanguageSelector from "./languageSelector"
+import "../App.css"
 
 class App extends React.Component {
   render() {
